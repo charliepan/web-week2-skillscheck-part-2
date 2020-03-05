@@ -9,8 +9,13 @@
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
   
-  //Code here
-
+//Code here
+const dragonMapper = arr =>{
+  const dragons = arr.map(val =>{
+    return val + '...here be dragons';
+  });
+  return dragons;
+};
 
 
 //////////////////PROBLEM 2////////////////////
@@ -20,8 +25,11 @@
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
   
-  //Code here
-
+//Code here
+const cookieLoversOnly = arr =>{
+  const onlyCookies = arr.filter(val => val.favoriteCookie);
+  return onlyCookies;
+};
 
 //////////////////PROBLEM 3////////////////////
 
@@ -34,8 +42,12 @@
 //Hint: there is an array method for this.
 
 
-  //Code here
-
+//Code here
+const changeValue = (arr, cb) =>{
+  arr.forEach(val =>{
+    cb(val);
+  })
+};
 
 
 //////////////////PROBLEM 4////////////////////
@@ -46,8 +58,10 @@
 //of multiplying all the elements together)
 //Return the product.
   
-  //Code here
-
+//Code here
+const findProduct = arr => arr.reduce((tot,val)=>{
+  return tot * val;
+});
 
 //////////////////PROBLEM 5////////////////////
 
@@ -63,8 +77,8 @@
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-  //Code here
-
+//Code here
+const cipherize = (arr, str) => str.charAt(arr.indexOf(str));
 
 
 //////////////////PROBLEM 6////////////////////
@@ -74,4 +88,5 @@
 //string. Use built-in methods for taking the string 
 //apart, reversing it, and putting it back together again.
 
-  //Code here
+//Code here
+const reverseMe = str => str.split('').reverse().join('');

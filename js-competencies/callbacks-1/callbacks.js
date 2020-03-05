@@ -3,7 +3,19 @@
 // Write a function called stringItOut that takes in an array. Determine if it is an array of numbers or strings and sort it greatest to least accordingly (sort strings alphabetically). Return the array converted into a string using the toString method.
 
 //Code here
+const stringItOut = arr =>{
+  if(typeof arr[0] === 'string'){
+    arr.sort();
+    arr.reverse();
+  }
+  else{
+    arr.sort((a,b)=> b-a);
+  }
+  
+  let str = arr.toString();
 
+  return str;
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -18,3 +30,4 @@ function complex(num1, num2) {
 }
 
 //Code here
+const mathResult = math(complex,2,3);

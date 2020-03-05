@@ -9,8 +9,15 @@
 //return the FIRST callback param invoked. Else, invokesCallbacks 
 //should return the SECOND callback param invoked.
 
-  //Code here
-
+//Code here
+const invokesCallbacks = (num,firstcb,secondcb) =>{
+  if(num > 10){
+    return firstcb();
+  }
+  else{
+    return secondcb();
+  }
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -25,7 +32,10 @@
   function timedGreeting(callback){
 
     //Code here
+    //greeting = setTimeout(callback,1000);
+    setTimeout(()=>{
+      greeting = callback();
+    },1000);
 
-    
   }
 
